@@ -9,17 +9,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 public class CustomerDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CustomerDemoApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(CustomerDemoApplication.class, args);
+  }
 
-	@Bean
-	public WebMvcConfigurerAdapter webConfiguration() {
-		return new WebMvcConfigurerAdapter() {
-			@Override
-			public void addViewControllers(ViewControllerRegistry registry) {
-				registry.addViewController("/").setViewName("index");
-			}
-		};
-	}
+  @Bean
+  public WebMvcConfigurerAdapter webConfiguration() {
+    return new WebMvcConfigurerAdapter() {
+      @Override
+      public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("index");
+      }
+    };
+  }
 }
